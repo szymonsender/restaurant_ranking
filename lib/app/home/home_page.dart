@@ -32,13 +32,15 @@ class _HomePageState extends State<HomePage> {
           return const RestaurantPage();
         }
         if (currentIndex == 1) {
-          return const AddOpinionPage();
-        }
-        if (currentIndex == 2) {
-          return const Center(
-            child: const Text(''),
+          return AddOpinionPage(
+            onSave: () {
+              setState(() {
+                currentIndex = 0;
+              });
+            },
           );
         }
+
         return MyAccountPage(email: widget.user.email);
       }),
       bottomNavigationBar: BottomNavigationBar(
@@ -66,9 +68,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
-
-
-
-

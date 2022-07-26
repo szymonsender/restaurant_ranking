@@ -50,28 +50,29 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () async {
                   if (isCreatingAccount == true) {
                     try {
-                    await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                      await FirebaseAuth.instance
+                          .createUserWithEmailAndPassword(
                         email: widget.emailController.text,
-                        password: widget.passwordController.text,);
-                  } catch (error) {
-                    setState(() {
-                      erroMessgage = error.toString();
-                    });
-                  }
-
+                        password: widget.passwordController.text,
+                      );
+                    } catch (error) {
+                      setState(() {
+                        erroMessgage = error.toString();
+                      });
+                    }
                   } else {
                     try {
-                    await FirebaseAuth.instance.signInWithEmailAndPassword(
-                        email: widget.emailController.text,
-                        password: widget.passwordController.text);
-                  } catch (error) {
-                    setState(() {
-                      erroMessgage = error.toString();
-                    },);
+                      await FirebaseAuth.instance.signInWithEmailAndPassword(
+                          email: widget.emailController.text,
+                          password: widget.passwordController.text);
+                    } catch (error) {
+                      setState(
+                        () {
+                          erroMessgage = error.toString();
+                        },
+                      );
+                    }
                   }
-                  }
-
-                  
                 },
                 child: Text(isCreatingAccount == true
                     ? 'Zarejestruj się'
@@ -81,23 +82,25 @@ class _LoginPageState extends State<LoginPage> {
                 height: 20,
               ),
               if (isCreatingAccount == false) ...[
-              TextButton(
-                onPressed: () {
-                  setState(() {
-                    isCreatingAccount = true;
-                  });
-                },
-                child: const Text('Utwórz konto'),
-              ),],
+                TextButton(
+                  onPressed: () {
+                    setState(() {
+                      isCreatingAccount = true;
+                    });
+                  },
+                  child: const Text('Utwórz konto'),
+                ),
+              ],
               if (isCreatingAccount == true) ...[
-              TextButton(
-                onPressed: () {
-                  setState(() {
-                    isCreatingAccount = false;
-                  });
-                },
-                child: const Text('Masz już konto?'),
-              ),],
+                TextButton(
+                  onPressed: () {
+                    setState(() {
+                      isCreatingAccount = false;
+                    });
+                  },
+                  child: const Text('Masz już konto?'),
+                ),
+              ],
             ],
           ),
         ),

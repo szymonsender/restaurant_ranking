@@ -1,8 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-
-
 class RestaurantPage extends StatelessWidget {
   const RestaurantPage({
     Key? key,
@@ -11,8 +9,10 @@ class RestaurantPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
-        stream:
-            FirebaseFirestore.instance.collection('restaruants').orderBy('rating', descending: true).snapshots(),
+        stream: FirebaseFirestore.instance
+            .collection('restaurants')
+            .orderBy('rating', descending: true)
+            .snapshots(),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return const Center(child: Text('Coś poszło nie tak'));
@@ -23,7 +23,7 @@ class RestaurantPage extends StatelessWidget {
 
           final documents = snapshot.data!.docs;
           return ListView(
-            children:  [
+            children: [
               for (final document in documents) ...[
                 Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -34,17 +34,14 @@ class RestaurantPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(document['name']),
-                          const SizedBox(height: 5,),
                           Text(document['city']),
                         ],
                       ),
-                      
                       Text(document['rating'].toString()),
                     ],
                   ),
                 ),
-              ], 
-              
+              ],
             ],
           );
         });

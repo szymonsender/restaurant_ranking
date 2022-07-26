@@ -1,4 +1,4 @@
-package com.example.restaurant_ranking
+package com.szymonsender.restaurant_ranking
 
 import io.flutter.embedding.android.FlutterActivity
 

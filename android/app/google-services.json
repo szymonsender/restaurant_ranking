@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "793845981207",
+    "project_id": "appdistribution19",
+    "storage_bucket": "appdistribution19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793845981207:android:f3d1f5995933191c987c52",
+        "android_client_info": {
+          "package_name": "com.szymonsender.firebase_app_distribution_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793845981207-17chv2ldqfp0e9leqegm8inh7mspaqb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDoOsfLhIOOBX9rm3cJnkG4HxXkuJFwYo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793845981207-17chv2ldqfp0e9leqegm8inh7mspaqb4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "793845981207-feicfcequ6fu01j5oj4q07rmj5525bvr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.szymonsender.firebaseAppDistributionDemo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793845981207:android:c5ad0e60e06b1d92987c52",
+        "android_client_info": {
+          "package_name": "com.szymonsender.restaurant_ranking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793845981207-17chv2ldqfp0e9leqegm8inh7mspaqb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDoOsfLhIOOBX9rm3cJnkG4HxXkuJFwYo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793845981207-17chv2ldqfp0e9leqegm8inh7mspaqb4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "793845981207-feicfcequ6fu01j5oj4q07rmj5525bvr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.szymonsender.firebaseAppDistributionDemo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

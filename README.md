@@ -1,16 +1,12 @@
-# restaurant_ranking
+# Restaurant ranking
 
-A new Flutter project.
+An application that allows you to share restaurant ratings with others.
 
-## Getting Started
+From the application, you add your entry to the database, then all the data is downloaded and displayed.
 
-This project is a starting point for a Flutter application.
+## Gif
 
-A few resources to get you started if this is your first Flutter project:
+<img src="https://user-images.githubusercontent.com/87803016/181074094-5af75735-a71b-42d8-8853-64136f5be599.gif" width="200">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+

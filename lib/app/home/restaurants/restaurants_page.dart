@@ -12,7 +12,7 @@ class RestaurantPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
         stream:
-            FirebaseFirestore.instance.collection('restaruants').snapshots(),
+            FirebaseFirestore.instance.collection('restaruants').orderBy('rating', descending: true).snapshots(),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return const Center(child: Text('Coś poszło nie tak'));
